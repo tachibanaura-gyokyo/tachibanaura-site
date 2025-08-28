@@ -153,24 +153,23 @@
       <!-- News -->
       <section id="news" class="bg-white rounded-2xl border shadow-sm">
         <div class="p-6">
-          <h3 class="text-xl font-bold">お知らせ</h3>
-          <ul class="mt-4 divide-y">
-            <!-- ▼ お知らせは下の <li> をコピーして書き換えるだけで更新できます -->
-            <li class="py-3 flex items-start gap-4">
-              <time class="shrink-0 w-24 text-sm text-slate-500">2025/08/27</time>
-              <div>
-                <p class="font-medium">公式サイト（仮）を公開しました</p>
-                <p class="text-sm text-slate-600">内容の誤り等がありましたら事務局までお知らせください。</p>
-              </div>
-            </li>
-            <li class="py-3 flex items-start gap-4">
-              <time class="shrink-0 w-24 text-sm text-slate-500">2025/08/01</time>
-              <div>
-                <p class="font-medium">夏季の遊漁に関するお願い</p>
-                <p class="text-sm text-slate-600">安全第一での操業・レジャーにご協力ください。</p>
-              </div>
-            </li>
-          </ul>
+          <h3 class="text-xl font-bold">お知らせ</h3><ul id="newsList" class="mt-4 divide-y"></ul>
+      <template id="news-fallback">
+        <li class="py-3 flex items-start gap-4">
+          <time class="shrink-0 w-24 text-sm text-slate-500">2025/08/27</time>
+          <div>
+            <p class="font-medium">公式サイト（仮）を公開しました</p>
+            <p class="text-sm text-slate-600">内容の誤り等がありましたら事務局までお知らせください。</p>
+          </div>
+        </li>
+        <li class="py-3 flex items-start gap-4">
+          <time class="shrink-0 w-24 text-sm text-slate-500">2025/08/01</time>
+          <div>
+            <p class="font-medium">夏季の遊漁に関するお願い</p>
+            <p class="text-sm text-slate-600">安全第一での操業・レジャーにご協力ください。</p>
+          </div>
+        </li>
+      </template>
         </div>
       </section>
 
