@@ -1,0 +1,24 @@
+/* 文字の読みやすさを少し向上 */
+body { line-height: 1.8; }
+
+/* ヒーロー見出しを少しだけ読みやすく（影） */
+.hero h2 { text-shadow: 0 2px 8px rgba(0,0,0,.35); }
+
+/* ブログ画像バナーを少し拡大（ホバー演出） */
+a[title="ブログへ"] img { transition: transform .25s; }
+a[title="ブログへ"]:hover img { transform: scale(1.02); }
+
+/* フッターの小さい文字を少しコントラストUP */
+footer { letter-spacing: .01em; }
+
+/* サイト全体のリンク色とホバー */
+a { color: #0ea5e9; }               /* sky-500 に近い色 */
+a:hover { text-decoration: underline; }
+
+/* サイドの小バナーの角を強調 */
+aside img { border-radius: 16px; }
+
+/* スマホだけ余白を増やす（768px以下） */
+@media (max-width: 768px) {
+  .hero .mt-6 { margin-top: 1.25rem; }
+}
