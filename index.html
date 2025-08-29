@@ -50,7 +50,7 @@
       <ul class="flex flex-wrap gap-3 py-3">
         <li><a href="#top" class="px-3 py-2 rounded hover:bg-sky-600">トップ</a></li>
         <li><a href="#fishery" class="px-3 py-2 rounded hover:bg-sky-600">橘浦の漁業</a></li>
-        <li><a href="#about" class="px-3 py-2 rounded hover:bg-sky-600">組合の概要</a></li>
+        <li><a href="https://tachibanaura-gyokyo.github.io/tachibanaura-site/about.html" class="px-3 py-2 rounded hover:bg-sky-600">組合の概要</a></li>
         <li><a href="#activity" class="px-3 py-2 rounded hover:bg-sky-600">組合の活動</a></li>
         <li><a href="#enjoy" class="px-3 py-2 rounded hover:bg-sky-600">橘浦で楽しむ</a></li>
         <li class="ml-auto hidden sm:block"><a href="#news" class="px-3 py-2 rounded bg-white text-sky-700 font-semibold">お知らせ</a></li>
@@ -64,9 +64,9 @@
       <div class="max-w-6xl mx-auto px-4 py-16 sm:py-24 text-white">
         <p class="text-sm tracking-wider uppercase text-sky-200">港のある暮らし</p>
         <h2 class="text-3xl sm:text-5xl font-bold leading-tight">橘浦の海は今日も元気で美しい</h2>
-        <p class="mt-3 max-w-2xl text-sky-100">四国西南部・大月町の橘浦。清らかな海と人々の営みが息づく港町です。漁業、観光、地域活動などの情報をお届けします。</p>
+        <p class="mt-3 max-w-2xl text-sky-100">四国西南部・大月町の橘浦。清らかな海と人々の営みが息づく集落です。漁業、観光、地域活動などの情報をお届けします。</p>
         <div class="mt-6 flex flex-wrap gap-3">
-          <a href="#about" class="px-5 py-3 bg-sky-500 hover:bg-sky-400 rounded-lg font-semibold">組合について</a>
+          <a href="https://tachibanaura-gyokyo.github.io/tachibanaura-site/about.html" class="px-5 py-3 bg-sky-500 hover:bg-sky-400 rounded-lg font-semibold">組合について</a>
           <a href="#contact" class="px-5 py-3 bg-white/90 text-slate-900 hover:bg-white rounded-lg font-semibold">お問い合わせ</a>
         </div>
       </div>
@@ -80,7 +80,7 @@
         <img src="https://tachibanaura-gyokyo.github.io/tachibanaura-site/img/gyogyo2.jpg" alt="橘浦の漁業" class="h-28 w-full object-cover group-hover:scale-105 transition"/>
         <div class="p-3"><p class="font-semibold">橘浦の漁業</p><p class="text-sm text-slate-500">Fishery of Tachibanoura</p></div>
       </a>
-      <a href="#about" class="group relative overflow-hidden rounded-2xl border shadow-sm">
+      <a href="about.html" class="group relative overflow-hidden rounded-2xl border shadow-sm">
         <img src="https://tachibanaura-gyokyo.github.io/tachibanaura-site/img/Top.jpg" alt="組合概要" class="h-28 w-full object-cover group-hover:scale-105 transition"/>
         <div class="p-3"><p class="font-semibold">橘浦漁協 概要</p><p class="text-sm text-slate-500">JF Tachibanoura</p></div>
       </a>
@@ -104,7 +104,7 @@
         <nav class="p-2">
           <ul class="space-y-1 text-sm">
             <li><a class="block px-4 py-2 rounded hover:bg-slate-50" href="#fishery">橘浦の漁業</a></li>
-            <li><a class="block px-4 py-2 rounded hover:bg-slate-50" href="#about">組合の概要</a></li>
+            <li><a href="https://tachibanaura-gyokyo.github.io/tachibanaura-site/about.html" class="block px-4 py-2 rounded hover:bg-slate-50">組合の概要</a></li>
             <li><a class="block px-4 py-2 rounded hover:bg-slate-50" href="#activity">組合の活動</a></li>
             <li><a class="block px-4 py-2 rounded hover:bg-slate-50" href="#enjoy">橘浦で楽しむ</a></li>
             <li><a class="block px-4 py-2 rounded hover:bg-slate-50" href="#access">アクセス</a></li>
@@ -115,7 +115,14 @@
 
       <!-- Small Banners (replace images as needed) -->
       <div class="mt-6 space-y-4">
-        <img class="w-full rounded-xl shadow" src="https://tachibanaura-gyokyo.github.io/tachibanaura-site/img/blog.jpg" alt="組合長のブログ">
+        <a href="https://tachibanaura-gyokyo.github.io/tachibanaura-site/blog/" class="group block" title="ブログへ">
+          <div class="relative">
+            <img class="w-full rounded-xl shadow" src="https://tachibanaura-gyokyo.github.io/tachibanaura-site/img/blog.jpg" alt="組合長のブログ">
+            <div class="pointer-events-none absolute inset-0 rounded-xl bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
+            <span class="pointer-events-none absolute bottom-2 left-3 right-3 text-white font-semibold drop-shadow">組合長のブログ</span>
+          </div>
+        </a>
+
         <img class="w-full rounded-xl shadow" src="https://tachibanaura-gyokyo.github.io/tachibanaura-site/img/maguro.jpg" alt="案内">
       </div>
     </aside>
@@ -126,7 +133,7 @@
         <img src="https://tachibanaura-gyokyo.github.io/tachibanaura-site/img/Top3.png" alt="港" class="w-full h-56 object-cover"/>
         <div class="p-6">
           <h3 class="text-xl font-bold">自然に囲まれた橘浦漁協へようこそ</h3>
-          <p class="mt-2 text-slate-600">橘浦は四国西南部に位置し、豊かな自然に恵まれた地域です。青い海、豊かな魚介類、温かな人々の暮らしが魅力です。定置網漁や一本釣り、刺網、刺網等を中心に多様な生業が営まれています。</p>
+          <p class="mt-2 text-slate-600">橘浦は四国西南部に位置し、豊かな自然に恵まれた地域です。青い海、豊かな魚介類、温かな人々の暮らしが魅力です。浜は昔ながらの一本釣や刺網漁のほか、時代の先端を行くマグロやブリなどの養殖基地として賑わっています。</p>
         </div>
       </article>
 
@@ -203,7 +210,7 @@
     <div class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-8">
       <div>
         <p class="font-bold">JF 橘浦漁業協同組合</p>
-        <p class="text-sm text-slate-400 mt-2">〒788-0352<br>高知県幡多郡大月町橘浦263番地<br>TEL: 0880-77-1111 / FAX: 0880-77-1112</p>
+        <p class="text-sm text-slate-400 mt-2">〒788-0352 高知県幡多郡大月町橘浦263番地<br>TEL: 0880-77-1111 / FAX: 0880-77-1112</p>
       </div>
       <nav class="text-sm">
         <p class="font-semibold">サイト内リンク</p>
@@ -215,6 +222,14 @@
           <li><a href="#news" class="hover:underline">お知らせ</a></li>
         </ul>
       </nav>
+      <div id="sitemap" class="text-sm">
+        <p class="font-semibold">運用メモ</p>
+        <ul class="mt-2 list-disc list-inside text-slate-400">
+          <li>画像は /img 配下にまとめて保存して差し替え</li>
+          <li>お知らせは <code>&lt;li&gt;</code> を複製して追記</li>
+          <li>お問い合わせは Google フォーム等に切替可能</li>
+        </ul>
+      </div>
     </div>
     <div class="border-t border-slate-700">
       <div class="max-w-6xl mx-auto px-4 py-4 text-xs text-slate-400">© <span id="y"></span> Tachibanoura Fisheries Cooperative Association</div>
