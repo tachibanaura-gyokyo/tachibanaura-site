@@ -10,6 +10,24 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <style>body{font-family:'Noto Sans JP',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;}</style>
 </head>
+    <!-- Header -->
+  <header class="bg-white shadow">
+    <div class="max-w-6xl mx-auto px-4 py-5 flex items-center gap-4">
+      <img src="https://tachibanaura-gyokyo.github.io/tachibanaura-site/img/JF.jpg" alt="JF" class="h-12 w-auto rounded"/>
+      <div>
+        <h1 class="text-xl sm:text-2xl font-bold">橘浦漁業協同組合</h1>
+        <p class="text-slate-500 text-sm">Tachibanoura Fisheries Cooperative Association</p>
+      </div>
+      <div class="ml-auto sm:hidden">
+        <button id="menuBtn" class="px-3 py-2 border rounded">メニュー</button>
+      </div>      
+      <nav class="ml-auto hidden sm:flex gap-4 text-sm">
+        <span class="font-semibold">組合長のブログ</span>
+        <li><a href="https://tachibanaura-gyokyo.github.io/tachibanaura-site/">トップ</a></li>
+      </nav>
+    </div>
+  </header>
+  
 <body class="bg-slate-50 text-slate-800">
   <!-- body の一番上に置く -->
   <div class="fixed inset-0 -z-10 bg-center bg-cover" style="background-image: url('https://tachibanaura-gyokyo.github.io/tachibanaura-site/img/Top2.jpg');"></div>
