@@ -10,7 +10,11 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <style>body{font-family:'Noto Sans JP',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;}</style>
 </head>
-<body class="bg-slate-50 text-slate-800">
+<body class="bg-slate-50 text-slate-800">  
+  <!-- body の一番上に置く -->
+  <div class="fixed inset-0 -z-10 bg-center bg-cover" style="background-image: url('https://tachibanaura-gyokyo.github.io/tachibanaura-site/img/Top2.jpg');"></div>
+  <!-- 文字の視認性アップ用の薄い幕（任意） -->
+  <div class="fixed inset-0 -z-10 bg-black/30"></div>
 <main class="max-w-3xl mx-auto p-6">
 <h1 class="text-2xl font-bold">プライバシーポリシー</h1>
 <p class="mt-4">橘浦漁業協同組合（以下「当組合」）は、以下のとおり個人情報保護方針を定め、<br>適切に取り扱います。</p>
