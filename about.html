@@ -9,7 +9,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="styles.css">
-  <style>body{font-family:'Noto Sans JP',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;}</style>
+  <style>
+    body{ font-family: 'Noto Sans JP', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+      .text-outline{
+      -webkit-text-stroke: 1px rgba(0,0,0,.9); /* Chrome/Safari 等 */
+      text-stroke: 1px rgba(0,0,0,.9);
+      text-shadow: -1px -1px 0 rgba(0,0,0,.7), 1px -1px 0 rgba(0,0,0,.7), -1px 1px 0 rgba(0,0,0,.7), 1px 1px 0 rgba(0,0,0,.7);
+      }
+      .text-shadow-strong{
+      text-shadow: 0 2px 6px rgba(0,0,0,.45), 0 0 2px rgba(0,0,0,.35);
+      }
+  </style>
 </head>
 <body class="bg-sky-50 text-slate-800">
   <!-- body の一番上に置く -->
@@ -51,11 +61,11 @@
   <section class="mt-8 grid md:grid-cols-3 rounded-2x1 border gap-6">
     <div class="md:col-span-2 bg-white/50 backdrop-blur-sm rounded-6x1 border p-6">
       <h2 class="text-xl font-semibold">沿革</h2>
-        <dd class="sm:col-span-2">　明治34年に漁業法が公布され、安満地、橘浦、泊浦、龍ケ迫の4地区で奥内漁業会が発足される。<br>　昭和24年2月、水産業協同組合法の施行によって漁業会は解散し、漁業協同組合が各地区に設立された。
+        <dd class="text-shadow-strong sm:col-span-2">　明治34年に漁業法が公布され、安満地、橘浦、泊浦、龍ケ迫の4地区で奥内漁業会が発足される。<br>　昭和24年2月、水産業協同組合法の施行によって漁業会は解散し、漁業協同組合が各地区に設立された。
           <br>　そして、平成12年の大合併により、大月町内の漁協はすくも湾漁業協同組合に併合されたが、当組合は単独自立の道を選択して現在に至る。<br><br></dd>
       
       <dl class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-x-6 gap-y-3 text-sm">
-        <dt class="text-slate-500">昭和24年9月</dt><dd class="sm:col-span-2">橘浦漁業協同組合　設立<br></dd>
+        <dt class="text-white text-slate-500 text-shadow-strong">昭和24年9月</dt><dd class="sm:col-span-2">橘浦漁業協同組合　設立<br></dd>
         <dt class="text-slate-500">昭和46年6月</dt><dd class="sm:col-span-2">橘浦漁業協同組合事務所兼漁民研修所　建設　移転<br></dd>
         <dt class="text-slate-500">昭和60年5月</dt><dd class="sm:col-span-2">共同作業施設　建設<br></dd>
         <dt class="text-slate-500">平成26年3月</dt><dd class="sm:col-span-2">製氷施設　建設<br></dd>
