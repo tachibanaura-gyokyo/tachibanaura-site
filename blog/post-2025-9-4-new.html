@@ -24,7 +24,7 @@
     </style>
   </head>
 
-  <div id="header"></div>
+  <?php include "https://tachibanaura-gyokyo.github.io/tachibanaura-site/header.html" ?>
   
   <body class="bg-slate-50 text-slate-800">
     <!-- body の一番上に置く -->
@@ -54,10 +54,5 @@
   </footer>
   
 <script>document.getElementById('pp-date').textContent=new Date().toISOString().slice(0,10);</script>
-    <script>
-      fetch("header.html")
-        .then((response) => response.text())
-        .then((data) => document.querySelector("#header").innerHTML = data);
-    </script>
   </body>
 </html>
