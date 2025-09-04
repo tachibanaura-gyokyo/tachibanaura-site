@@ -24,7 +24,7 @@
     </style>
   </head>
 
-  <?php include "https://tachibanaura-gyokyo.github.io/tachibanaura-site/header.php" ?>
+  <div id="header"></div>
   
   <body class="bg-slate-50 text-slate-800">
     <!-- body の一番上に置く -->
@@ -46,13 +46,16 @@
           </p>
         </div>
     </main>
-  <!-- Footer -->
-  <footer class="bg-slate-900 text-slate-200 mt-10">
-    <div class="border-t border-slate-700">
-      <div class="max-w-6xl mx-auto px-4 py-4 text-xs text-slate-400">© <span id="y"></span> Tachibanoura Fisheries Cooperative Association</div>
-    </div>
-  </footer>
-  
-<script>document.getElementById('pp-date').textContent=new Date().toISOString().slice(0,10);</script>
+    <script>document.getElementById('pp-date').textContent=new Date().toISOString().slice(0,10);</script>
   </body>
+  
+  <div id="footer"></div>
+  <script>
+    fetch("header.html")
+      .then((response) => response.text())
+      .then((data) => document.querySelector("#header").innerHTML = data);
+    fetch("footer.html")
+      .then((response) => response.text())
+      .then((data) => document.querySelector("#footer").innerHTML = data);
+  </script>
 </html>
