@@ -27,53 +27,9 @@
   
 </head>
 <body class="bg-slate-50 text-slate-800">
-  <!-- body の一番上に置く -->
-  <div class="fixed inset-0 -z-10 bg-center bg-cover" style="background-image: url('https://tachibanaura-gyokyo.github.io/tachibanaura-site/img/Top2.jpg');"></div>
-  <!-- 文字の視認性アップ用の薄い幕（任意） -->
-  <div class="fixed inset-0 -z-10 bg-white/5"></div>
-
-  <!-- Top Bar -->
-  <!--div class="bg-slate-900 text-slate-100 text-sm">
-    <div class="max-w-6xl mx-auto px-4 py-2 flex items-center justify-between">
-      <div class="flex items-center gap-2">
-        <span class="font-semibold tracking-wide">JF 橘浦漁業協同組合</span>
-        <span class="text-slate-400 hidden sm:inline">| 高知県大月町</span>
-      </div>
-      <nav class="hidden sm:flex items-center gap-6">
-        <a href="#contact" class="hover:underline">お問い合わせ</a>
-        <a href="#sitemap" class="hover:underline">サイトマップ</a>
-      </nav>
-    </div>
-  </div>
-
-  <!-- Primary Navigation -->
-  <nav id="primaryNav" class="bg-sky-700 text-sky-50">
-    <div class="max-w-6xl mx-auto px-4">
-      <ul class="flex flex-wrap gap-3 py-3">
-        <li><a href="#top" class="px-3 py-2 rounded hover:bg-sky-600">トップ</a></li>
-        <li><a href="#fishery" class="px-3 py-2 rounded hover:bg-sky-600">橘浦の漁業</a></li>
-        <li><a href="https://tachibanaura-gyokyo.github.io/tachibanaura-site/about.html" class="px-3 py-2 rounded hover:bg-sky-600">組合の概要</a></li>
-        <li><a href="#activity" class="px-3 py-2 rounded hover:bg-sky-600">組合の活動</a></li>
-        <li><a href="#enjoy" class="px-3 py-2 rounded hover:bg-sky-600">橘浦で楽しむ</a></li>
-        <li><a href="https://tachibanaura-gyokyo.github.io/tachibanaura-site/blog/">組合長のブログ</a></li>
-        <li><a href="https://tachibanaura-gyokyo.github.io/tachibanaura-site/view.html">橘浦の風景</a></li>
-        <li class="ml-auto hidden sm:block"><a href="#news" class="px-3 py-2 rounded bg-white text-sky-700 font-semibold">お知らせ</a></li>
-      </ul>
-    </div>
-  </nav>
+  <div id="backimage"></div>
+  <div id="header"></div>
   
-  <!-- Header -->
-  <header class="bg-transparent">
-    <div class="max-w-6xl mx-auto px-4 py-5 flex items-center gap-4">
-      <img src="https://tachibanaura-gyokyo.github.io/tachibanaura-site/img/JF.jpg" alt="JF" class="h-12 w-auto rounded"/>
-      <div>
-        <h1 class="text-xl sm:text-2xl font-bold">橘浦漁業協同組合</h1>
-        <dt class="text-slate-500 text-white text-shadow-strong">Tachibanoura Fisheries Cooperative Association</dt>
-      </div>
-    </div>
-  </header>
-
-
   <!-- Hero -->
   <section class="bg-transparent">
     <div class="max-w-6xl mx-auto px-4 py-16 sm:py-24 text-white">
@@ -255,7 +211,18 @@
       <div class="max-w-6xl mx-auto px-4 py-4 text-xs text-slate-400">© <span id="y"></span> Tachibanoura Fisheries Cooperative Association</div>
     </div>
   </footer>
-
+  <script>
+    fetch("https://tachibanaura-gyokyo.github.io/tachibanaura-site/include/header.html")
+      .then((response) => response.text())
+      .then((data) => document.querySelector("#header").innerHTML = data);
+    fetch("https://tachibanaura-gyokyo.github.io/tachibanaura-site/include/style.html")
+      .then((response) => response.text())
+      .then((data) => document.querySelector("#style").innerHTML = data);
+    fetch("https://tachibanaura-gyokyo.github.io/tachibanaura-site/include/backimage.html")
+      .then((response) => response.text())
+      .then((data) => document.querySelector("#backimage").innerHTML = data);
+  </script>
+  
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
     const btn = document.getElementById('menuBtn');
