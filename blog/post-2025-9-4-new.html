@@ -47,14 +47,14 @@
         </div>
     </main>
     <script>
-      fetch("https://tachibanaura-gyokyo.github.io/tachibanaura-site/header.html")
+      fetch("https://tachibanaura-gyokyo.github.io/tachibanaura-site/include/header.html")
         .then((response) => response.text())
         .then((data) => document.querySelector("#header").innerHTML = data);
     </script>
   </body>
   <div id="footer"></div>
     <script>
-      fetch("https://tachibanaura-gyokyo.github.io/tachibanaura-site/footer.html")
+      fetch("https://tachibanaura-gyokyo.github.io/tachibanaura-site/include/footer.html")
         .then((response) => response.text())
         .then((data) => document.querySelector("#footer").innerHTML = data);
     </script>
