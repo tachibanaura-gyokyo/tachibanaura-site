@@ -14,14 +14,20 @@
 <body class="bg-sky-50 text-slate-800">
   <div id="backimage"></div>
   <div id="header"></div>
-  <nav id="primaryNav" class="bg-sky-700 text-sky-50">
-    <div class="max-w-6xl mx-auto px-4">
-      <ul class="space-y-1 text-sm">
-        <li><a href="https://tachibanaura-gyokyo.github.io/tachibanaura-site/view2.html" class="px-3 py-2 rounded hover:bg-sky-600">橘浦の風景２</a></li>
-        <li><a href="https://tachibanaura-gyokyo.github.io/tachibanaura-site/view3.html" class="px-3 py-2 rounded hover:bg-sky-600">橘浦の風景３</a></li>
-      </ul>
-    </div>
-  </nav>
+  
+  <main class="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 lg:grid-cols-4 gap-8">
+    <aside class="lg:col-span-1">
+      <div class="bg-white rounded-2xl border shadow-sm overflow-hidden">
+        <h3 class="px-5 py-3 text-slate-700 font-semibold bg-slate-100">メニュー</h3>
+          <nav class="p-2">
+            <ul class="space-y-1 text-sm">
+              <li><a class="block px-4 py-2 rounded hover:bg-slate-50" href="https://tachibanaura-gyokyo.github.io/tachibanaura-site/sub/view2.html">橘浦の景色２</a></li>
+              <li><a class="block px-4 py-2 rounded hover:bg-slate-50" href="https://tachibanaura-gyokyo.github.io/tachibanaura-site/sub/view3.html">橘浦の景色３</a></li>
+            </ul>
+        </nav>
+      </div>
+    </aside>
+  </main>
 </body>
   <script>
     fetch("https://tachibanaura-gyokyo.github.io/tachibanaura-site/include/header.html")
