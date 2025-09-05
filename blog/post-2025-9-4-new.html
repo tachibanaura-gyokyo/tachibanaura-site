@@ -8,29 +8,13 @@
     </title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body{ font-family: 'Noto Sans JP', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
-        /* 画像を差し替える際は下の .hero を変更してください */
-        /*.hero{ background-image:url('https://tachibanaura-gyokyo.github.io/tachibanaura-site/img/Top2.jpg'); }*/
-        /* 文字の縁取り＆読みやすさ向上用ユーティリティ */
-        .text-outline{
-        -webkit-text-stroke: 1px rgba(0,0,0,.9); /* Chrome/Safari 等 */
-        text-stroke: 1px rgba(0,0,0,.9);
-        text-shadow: -1px -1px 0 rgba(0,0,0,.7), 1px -1px 0 rgba(0,0,0,.7), -1px 1px 0 rgba(0,0,0,.7), 1px 1px 0 rgba(0,0,0,.7);
-        }
-        .text-shadow-strong{
-        text-shadow: 0 2px 6px rgba(0,0,0,.75), 0 0 3px rgba(0,0,0,.65);
-        }
-    </style>
+    <div id="style"></div>
   </head>
 
   <div id="header"></div>
   
   <body class="bg-slate-50 text-slate-800">
-    <!-- body の一番上に置く -->
-    <div class="fixed inset-0 -z-10 bg-center bg-cover" style="background-image: url('https://tachibanaura-gyokyo.github.io/tachibanaura-site/img/Top2.jpg');"></div>
-    <!-- 文字の視認性アップ用の薄い幕（任意） -->
-    <div class="fixed inset-0 -z-10 bg-white/0"></div>
+    <div id="backimage"></div>
     
     <main class="max-w-6xl mx-auto p-6 prose">
       <section class="bg-white rounded-2xl border shadow-sm overflow-hidden">
@@ -47,7 +31,6 @@
         </div>
     </main>
     <div id="footer"></div>
-    
     <script>
       fetch("https://tachibanaura-gyokyo.github.io/tachibanaura-site/include/header.html")
         .then((response) => response.text())
@@ -55,6 +38,12 @@
       fetch("https://tachibanaura-gyokyo.github.io/tachibanaura-site/include/footer.html")
         .then((response) => response.text())
         .then((data) => document.querySelector("#footer").innerHTML = data);
+      fetch("https://tachibanaura-gyokyo.github.io/tachibanaura-site/include/style.html")
+        .then((response) => response.text())
+        .then((data) => document.querySelector("#style").innerHTML = data);
+      fetch("https://tachibanaura-gyokyo.github.io/tachibanaura-site/include/backimage.html")
+        .then((response) => response.text())
+        .then((data) => document.querySelector("#backimage").innerHTML = data);
     </script>
   </body>
 </html>
