@@ -8,54 +8,13 @@
     </title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body{ font-family: 'Noto Sans JP', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
-        /* 画像を差し替える際は下の .hero を変更してください */
-        /*.hero{ background-image:url('https://tachibanaura-gyokyo.github.io/tachibanaura-site/img/Top2.jpg'); }*/
-        /* 文字の縁取り＆読みやすさ向上用ユーティリティ */
-        .text-outline{
-        -webkit-text-stroke: 1px rgba(0,0,0,.9); /* Chrome/Safari 等 */
-        text-stroke: 1px rgba(0,0,0,.9);
-        text-shadow: -1px -1px 0 rgba(0,0,0,.7), 1px -1px 0 rgba(0,0,0,.7), -1px 1px 0 rgba(0,0,0,.7), 1px 1px 0 rgba(0,0,0,.7);
-        }
-        .text-shadow-strong{
-        text-shadow: 0 2px 6px rgba(0,0,0,.75), 0 0 3px rgba(0,0,0,.65);
-        }
-    </style>
+    <div id="style"></div>
   </head>
 
-  <!-- Primary Navigation -->
-  <nav id="primaryNav" class="bg-sky-700 text-sky-50">
-    <div class="max-w-6xl mx-auto px-4">
-      <ul class="flex flex-wrap gap-3 py-3">
-        <li class="sm:block"><a href="https://tachibanaura-gyokyo.github.io/tachibanaura-site/" class="px-3 py-2 rounded bg-white text-sky-700 font-semibold">トップ</a></li>
-        <li><a href="#fishery" class="px-3 py-2 rounded hover:bg-sky-600">橘浦の漁業</a></li>
-        <li><a href="https://tachibanaura-gyokyo.github.io/tachibanaura-site/about.html" class="px-3 py-2 rounded hover:bg-sky-600">組合の概要</a></li>
-        <li><a href="#activity" class="px-3 py-2 rounded hover:bg-sky-600">組合の活動</a></li>
-        <li><a href="#enjoy" class="px-3 py-2 rounded hover:bg-sky-600">橘浦で楽しむ</a></li>
-        <li><a href="https://tachibanaura-gyokyo.github.io/tachibanaura-site/blog/">組合長のブログ</a></li>
-        <li><a href="https://tachibanaura-gyokyo.github.io/tachibanaura-site/view.html">橘浦の風景</a></li>
-        <li class="ml-auto hidden sm:block"><a href="#news" class="px-3 py-2 rounded bg-white text-sky-700 font-semibold">お知らせ</a></li>
-      </ul>
-    </div>
-  </nav>
+  <div id="header"></div>
   
-  <!-- Header -->
-  <header class="bg-transparent">
-    <div class="max-w-6xl mx-auto px-4 py-5 flex items-center gap-4">
-      <img src="https://tachibanaura-gyokyo.github.io/tachibanaura-site/img/JF.jpg" alt="JF" class="h-12 w-auto rounded"/>
-      <div>
-        <h1 class="text-xl sm:text-2xl font-bold">橘浦漁業協同組合</h1>
-        <dt class="text-slate-500 text-white text-shadow-strong">Tachibanoura Fisheries Cooperative Association</dt>
-      </div>
-    </div>
-  </header>
-  
-  <body class="bg-slate-50 text-slate-800">    
-    <!-- body の一番上に置く -->
-    <div class="fixed inset-0 -z-10 bg-center bg-cover" style="background-image: url('https://tachibanaura-gyokyo.github.io/tachibanaura-site/img/Top2.jpg');"></div>
-    <!-- 文字の視認性アップ用の薄い幕（任意） -->
-    <div class="fixed inset-0 -z-10 bg-white/0"></div>
+  <body class="bg-slate-50 text-slate-800">
+    <div id="backimage"></div>
     <main class="max-w-3xl mx-auto p-6">
       <section class="mt-6 grid md:grid-cols-3 gap-6">
       <div class="md:col-span-2 bg-white rounded-2xl border shadow-sm p-6">
@@ -70,13 +29,21 @@
         </dl>
       </div>
     </main>
+    
+    <div id="footer"></div>
+    <script>
+      fetch("https://tachibanaura-gyokyo.github.io/tachibanaura-site/include/header.html")
+        .then((response) => response.text())
+        .then((data) => document.querySelector("#header").innerHTML = data);
+      fetch("https://tachibanaura-gyokyo.github.io/tachibanaura-site/include/footer.html")
+        .then((response) => response.text())
+        .then((data) => document.querySelector("#footer").innerHTML = data);
+      fetch("https://tachibanaura-gyokyo.github.io/tachibanaura-site/include/style.html")
+        .then((response) => response.text())
+        .then((data) => document.querySelector("#style").innerHTML = data);
+      fetch("https://tachibanaura-gyokyo.github.io/tachibanaura-site/include/backimage.html")
+        .then((response) => response.text())
+        .then((data) => document.querySelector("#backimage").innerHTML = data);
+    </script>
   </body>
-  <!-- Footer -->
-  <footer class="bg-slate-900 text-slate-200 mt-10">
-    <div class="border-t border-slate-700">
-      <div class="max-w-6xl mx-auto px-4 py-4 text-xs text-slate-400">© <span id="y"></span> Tachibanoura Fisheries Cooperative Association</div>
-    </div>
-  </footer>
-  
-<script>document.getElementById('pp-date').textContent=new Date().toISOString().slice(0,10);</script>
 </html>
