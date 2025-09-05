@@ -51,21 +51,20 @@
         </article>
       </section>
     </main>
-    <div id="hooter"></div>
+      <div id="hooter"></div>  
+      <script>
+        fetch("https://tachibanaura-gyokyo.github.io/tachibanaura-site/include/header.html")
+          .then((response) => response.text())
+          .then((data) => document.querySelector("#header").innerHTML = data);
+        fetch("https://tachibanaura-gyokyo.github.io/tachibanaura-site/include/hooter.html")
+          .then((response) => response.text())
+          .then((data) => document.querySelector("#hooter").innerHTML = data);
+        fetch("https://tachibanaura-gyokyo.github.io/tachibanaura-site/include/style.html")
+          .then((response) => response.text())
+          .then((data) => document.querySelector("#style").innerHTML = data);
+        fetch("https://tachibanaura-gyokyo.github.io/tachibanaura-site/include/backimage.html")
+          .then((response) => response.text())
+          .then((data) => document.querySelector("#backimage").innerHTML = data);
+      </script>
     </body>
-  
-  <script>
-    fetch("https://tachibanaura-gyokyo.github.io/tachibanaura-site/include/header.html")
-      .then((response) => response.text())
-      .then((data) => document.querySelector("#header").innerHTML = data);
-    fetch("https://tachibanaura-gyokyo.github.io/tachibanaura-site/include/hooter.html")
-      .then((response) => response.text())
-      .then((data) => document.querySelector("#hooter").innerHTML = data);
-    fetch("https://tachibanaura-gyokyo.github.io/tachibanaura-site/include/style.html")
-      .then((response) => response.text())
-      .then((data) => document.querySelector("#style").innerHTML = data);
-    fetch("https://tachibanaura-gyokyo.github.io/tachibanaura-site/include/backimage.html")
-      .then((response) => response.text())
-      .then((data) => document.querySelector("#backimage").innerHTML = data);
-  </script>
 </html>
