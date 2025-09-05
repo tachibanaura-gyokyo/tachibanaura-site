@@ -3,10 +3,7 @@
     <div class="border-t border-slate-700">
       <div class="max-w-6xl mx-auto px-4 py-4 text-xs text-slate-400">© <span id="y"></span> Tachibanoura Fisheries Cooperative Association</div>
     </div>
+    <script>
+      document.getElementById('y').textContent = new Date().getFullYear();
+    </script>
   </footer>
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-    const btn = document.getElementById('menuBtn');
-    const nav = document.getElementById('primaryNav');
-    if(btn){ btn.addEventListener('click',()=> nav.classList.toggle('hidden')); }
-  </script>
