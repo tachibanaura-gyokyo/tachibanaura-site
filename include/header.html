@@ -21,3 +21,9 @@
     </div>
   </div>
 </nav>
+<script>
+  // 画像のドラッグ保存を防ぐ
+  document.addEventListener('dragstart', e => {
+    if (e.target.tagName === 'IMG') e.preventDefault();
+  });
+</script>
