@@ -25,7 +25,9 @@
         <div class="p-2 order-2 md:order-1">
           <p class="px-1 text-slate-800">養殖漁業とは天候や海況に関係なく安定して魚がえられるしくみです。<br>稚魚を捕獲し、生簀にて最適な環境で育てます。</p>
         </div>
-        <img src="https://tachibanaura-gyokyo.github.io/tachibanaura-site/img/gyogyo2.webp" alt="マグロ養殖" width="160" height="90" style="border:0;" allowfullscreen="" loading="lazy" class="w-full h-56 md:h-full object-cover order-1 md:order-2"/>
+        <img src="https://tachibanaura-gyokyo.github.io/tachibanaura-site/img/gyogyo2.webp" alt="マグロ養殖" width="160" height="90" draggable="false"
+          style="-webkit-user-drag:none;-webkit-touch-callout:none;user-select:none;" allowfullscreen="" loading="lazy" class="w-full h-56 md:h-full object-cover order-1 md:order-2"/>
+        <div class="absolute inset-0" oncontextmenu="return false"></div>
       </div>
     </section>
     
@@ -74,6 +76,12 @@
     fetch("https://tachibanaura-gyokyo.github.io/tachibanaura-site/include/backimage.html")
       .then((response) => response.text())
       .then((data) => document.querySelector("#backimage").innerHTML = data);
+  </script>
+  <script>
+    // 画像のドラッグ保存を防ぐ
+    document.addEventListener('dragstart', e => {
+      if (e.target.tagName === 'IMG') e.preventDefault();
+    });
   </script>
 </body>
 </html>
