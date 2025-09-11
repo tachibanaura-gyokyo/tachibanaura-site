@@ -41,7 +41,11 @@
       document.getElementById("pp-date").innerHTML = showDay();
         function showDay() {
           var now = new Date();
-          return now;
+          var year = now.getFullYear;
+          var month = now.getMonth + 1;
+          var day = now.getDate;
+          var ryear = year - 2018;
+          return "令和"ryear"年"month"月"day"日";
         }
     </script>
   </body>
