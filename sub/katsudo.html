@@ -9,33 +9,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
-    <div id="style"></div>
+    <style id="style"></style>
   </head>
-  
-   <div id="header"></div>
     
   <body class="bg-slate-50 text-slate-800">
-    <div id="backimage"></div>
+    <div id="backimage"></div>  
+    <div id="header"></div>
       
     <main class="max-w-6xl mx-auto px-4 py-8">
       <section class="lg:col-span-3 space-y-8">
         <article id="top" class="bg-white/75 backdrop-blur-sm rounded-2xl border shadow-sm overflow-hidden">
           <div class="grid md:grid-cols-2 gap-0" oncontextmenu="return false">
-            <img src="https://tachibanaura-gyokyo.github.io/tachibanaura-site/img/sibatuke1.webp" alt="柴浸け様子" style="border:1;" allowfullscreen="" draggable="false"
-              class="pointer-events-none" style="-webkit-user-drag:none;-webkit-touch-callout:none;user-select:none;" allowfullscreen="" loading="lazy"/>
+            <img src="https://tachibanaura-gyokyo.github.io/tachibanaura-site/img/sibatuke1.webp" alt="柴浸け様子" style="border:1;" draggable="false"
+              class="pointer-events-none" style="-webkit-user-drag:none;-webkit-touch-callout:none;user-select:none;" loading="lazy"/>
             <div class="p-6">
               <h3 class="text-xl font-bold">毎年6月の恒例行事【モイカ柴浸け作業】</h3>
               <p class="text-slate-800">橘浦漁協では、毎年5月末から6月頃にモイカの産卵の為に柴浸け作業を行っています。<br>下記はモイカの産卵後の写真です。</p>
             </div>
             <img src="https://tachibanaura-gyokyo.github.io/tachibanaura-site/img/sibatuke2.webp" alt="柴浸けモニタリング" style="border:1;" draggable="false"
-              class="pointer-events-none" style="-webkit-user-drag:none;-webkit-touch-callout:none;user-select:none;" allowfullscreen="" loading="lazy"/>
+              class="pointer-events-none" style="-webkit-user-drag:none;-webkit-touch-callout:none;user-select:none;" loading="lazy"/>
           </div>
         </article>
   
         <article id="top" class="bg-white/75 backdrop-blur-sm rounded-2xl border shadow-sm overflow-hidden">
           <div class="grid md:grid-cols-2 gap-0" oncontextmenu="return false">
             <img src="https://tachibanaura-gyokyo.github.io/tachibanaura-site/img/clearwoter.webp" alt="クリアウォーター" style="border:0;" draggable="false"
-              class="pointer-events-none" style="-webkit-user-drag:none;-webkit-touch-callout:none;user-select:none;" allowfullscreen="" loading="lazy"/>
+              class="pointer-events-none" style="-webkit-user-drag:none;-webkit-touch-callout:none;user-select:none;" loading="lazy"/>
             <div class="p-6">
               <h3 class="text-xl font-bold">底質改善剤の散布</h3>
               <p class="text-slate-800">毎年6月頃に橘浦の漁場を綺麗に保つために、底質改善剤の散布を行っています。</p>
@@ -46,7 +45,7 @@
         <article id="top" class="bg-white/75 backdrop-blur-sm rounded-2xl border shadow-sm overflow-hidden">
           <div class="grid md:grid-cols-2 gap-0" oncontextmenu="return false">
             <img src="https://tachibanaura-gyokyo.github.io/tachibanaura-site/img/hamaseiso.webp" alt="浜清掃" style="border:0;" draggable="false"
-              class="pointer-events-none" style="-webkit-user-drag:none;-webkit-touch-callout:none;user-select:none;" allowfullscreen="" loading="lazy"/>
+              class="pointer-events-none" style="-webkit-user-drag:none;-webkit-touch-callout:none;user-select:none;" loading="lazy"/>
             <div class="p-6">
               <h3 class="text-xl font-bold">海の日【海浜清掃】</h3>
               <p class="text-slate-800">毎年海の日直近の日曜日には、海浜清掃を行っています。</p>
@@ -56,7 +55,6 @@
       </section>
     </main>
   
-    <script>document.getElementById('pp-date').textContent=new Date().toISOString().slice(0,10);</script>
     <div id="footer"></div>
     <script>
       fetch("https://tachibanaura-gyokyo.github.io/tachibanaura-site/include/header.html")
@@ -71,12 +69,6 @@
       fetch("https://tachibanaura-gyokyo.github.io/tachibanaura-site/include/backimage.html")
         .then((response) => response.text())
         .then((data) => document.querySelector("#backimage").innerHTML = data);
-    </script>
-    <script>
-      // 画像のドラッグ保存を防ぐ
-      document.addEventListener('dragstart', e => {
-        if (e.target.tagName === 'IMG') e.preventDefault();
-      });
     </script>
   </body>
 </html>
