@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://tachibanaura-gyokyo.github.io/tachibanaura-site/styles.css">
+  <script defer src="https://tachibanaura-gyokyo.github.io/tachibanaura-site/include/loader.js"></script>
   <style id="style"></style>
 </head>
   
@@ -39,14 +40,6 @@
       </div>
     </aside>
   </main>
-  <script>
-    fetch("https://tachibanaura-gyokyo.github.io/tachibanaura-site/include/header.html")
-      .then((response) => response.text())
-      .then((data) => document.querySelector("#header").innerHTML = data);
-    fetch("https://tachibanaura-gyokyo.github.io/tachibanaura-site/include/style.html")
-      .then((response) => response.text())
-      .then((data) => document.querySelector("#style").innerHTML = data);
-  </script>
 </body>  
 <button id="focusToggle"
   class="fixed bottom-4 right-4 z-[100] px-4 py-2 rounded-full bg-sky-600 text-white shadow
