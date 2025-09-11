@@ -39,9 +39,8 @@
     <div id="footer"></div>
     <script type="text/javascript">
       const today = new Date();
-      const options = { year: 'numeric', month: 'numeric', day: 'numeric', localeMatcher: 'best-fit' };
-      const wareki = today.toLocaleDateString('ja-JP-u-ca-japanese', options);
-      document.getElementById('pp-date').textContent = wareki;
+      const jdate = date.toLocaleDateString('ja-JP-u-ca-japanese', {dateStyle: 'long'})
+      document.getElementById('pp-date').textContent = jdate;
     </script>
   </body>
 </html>
