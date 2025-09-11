@@ -38,15 +38,10 @@
     </main>  
     <div id="footer"></div>
     <script type="text/javascript">
-      document.getElementById("pp-date").innerHTML = showDay();
-        function showDay() {
-          var now = new Date();
-          var year = now.getFullYear;
-          var month = now.getMonth + 1;
-          var day = now.getDate;
-          var ryear = year - 2018;
-          return '令和${ryear}年${month}月${day}日';
-        }
+      const today = new Date();
+      const options = { year: 'numeric', month: 'numeric', day: 'numeric', localeMatcher: 'best-fit' };
+      const wareki = today.toLocaleDateString('ja-JP-u-ca-japanese', options);
+      document.getElementById('pp-date').textContent = wareki;
     </script>
   </body>
 </html>
