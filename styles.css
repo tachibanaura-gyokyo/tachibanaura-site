@@ -32,3 +32,15 @@ img {
 @media (max-width: 768px) {
   .hero .mt-6 { margin-top: 1.25rem; }
 }
+
+<style>
+  /* 集中表示のときに隠す対象（必要に応じて追加OK） */
+  .focus-mode #primaryNav,
+  .focus-mode header,
+  .focus-mode aside,
+  .focus-mode footer {
+    display: none !important;
+  }
+  /* 本文を広げたい場合（任意） */
+  .focus-mode main { max-width: none !important; }
+</style>
