@@ -38,9 +38,10 @@
     </main>  
     <div id="footer"></div>
     <script type="text/javascript">
-      document.getElementById('pp-date').textContent = jdate;
-        const today = new Date();
-        const jdate = date.toLocaleDateString('ja-JP-u-ca-japanese', {dateStyle: 'long'});
+      document.getElementById("pp-date").innerHTML = = jdate;
+        var today = new Date();
+        var jdate = today.toLocaleDateString('ja-JP-u-ca-japanese', {dateStyle: 'long'});
+        return jdate
     </script>
   </body>
 </html>
