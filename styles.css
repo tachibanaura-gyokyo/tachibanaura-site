@@ -38,9 +38,8 @@ img {
   .focus-mode #primaryNav,
   .focus-mode header,
   .focus-mode aside,
-  .focus-mode footer {
+  .focus-mode footer,
+  .focus-mode main{
     display: none !important;
   }
-  /* 本文を広げたい場合（任意） */
-  .focus-mode main { max-width: none !important; }
 </style>
