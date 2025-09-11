@@ -35,14 +35,13 @@
             <p class="mt-8 text-sm text-shadow-strong text-sm text-slate-500">最終更新日: <span id="pp-date"></span></p>
           </div>
         </section>
-    </main>  
-    <div id="footer"></div>
+    </main>
     <script type="text/javascript">
-      document.getElementById("pp-date").innerHTML = = sdate;
-        function sdate() {
-          var today = new Date();
-          var jdate = today.toLocaleDateString('ja-JP-u-ca-japanese', {dateStyle: 'long'});
-          return jdate;
+      document.getElementById("pp-date").innerHTML = showDay();
+        function showDay() {
+          var now = new Date();
+          var day = now.toLocaleDateString('ja-JP-u-ca-japanese', {dateStyle: 'long'});
+          return day;
         }
     </script>
   </body>
