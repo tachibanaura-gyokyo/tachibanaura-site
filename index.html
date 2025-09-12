@@ -209,42 +209,42 @@
       </div>
       <div id="footer-inner"></div>
     </footer>
+    
+    <script>
+      (async () => {
+        const ul = document.getElementById('newsList');
+        try {
+          const res = await fetch('https://tachibanaura-gyokyo.github.io/tachibanaura-site/news.json', { cache: 'no-store' });
+          if (!res.ok) throw new Error('no json');
+          const items = await res.json();
+          if (!Array.isArray(items) || items.length === 0) throw new Error('empty');
+          ul.innerHTML = '';
+          for (const it of items) {
+            const li = document.createElement('li');
+            li.className = 'py-3 flex items-start gap-4';
+            const t = document.createElement('time');
+            t.className = 'shrink-0 w-24 text-sm text-slate-500';
+            const d = String(it.date || '').replaceAll('-', '/');
+            t.textContent = d || '';
+            const box = document.createElement('div');
+            const title = document.createElement('p');
+            title.className = 'font-medium';
+            title.textContent = it.title || '';
+            const body = document.createElement('p');
+            body.className = 'text-sm text-slate-600';
+            body.textContent = it.body || '';
+            box.appendChild(title);
+            if ((it.body||'').trim()) box.appendChild(body);
+            li.appendChild(t); li.appendChild(box);
+            ul.appendChild(li);
+          }
+        } catch (e) {
+          const tpl = document.getElementById('news-fallback');
+          if (tpl) ul.appendChild(tpl.content.cloneNode(true));
+        }
+      })();
+    </script>
   </body>
-
-  <script>
-  (async () => {
-    const ul = document.getElementById('newsList');
-    try {
-      const res = await fetch('https://tachibanaura-gyokyo.github.io/tachibanaura-site/news.json', { cache: 'no-store' });
-      if (!res.ok) throw new Error('no json');
-      const items = await res.json();
-      if (!Array.isArray(items) || items.length === 0) throw new Error('empty');
-      ul.innerHTML = '';
-      for (const it of items) {
-        const li = document.createElement('li');
-        li.className = 'py-3 flex items-start gap-4';
-        const t = document.createElement('time');
-        t.className = 'shrink-0 w-24 text-sm text-slate-500';
-        const d = String(it.date || '').replaceAll('-', '/');
-        t.textContent = d || '';
-        const box = document.createElement('div');
-        const title = document.createElement('p');
-        title.className = 'font-medium';
-        title.textContent = it.title || '';
-        const body = document.createElement('p');
-        body.className = 'text-sm text-slate-600';
-        body.textContent = it.body || '';
-        box.appendChild(title);
-        if ((it.body||'').trim()) box.appendChild(body);
-        li.appendChild(t); li.appendChild(box);
-        ul.appendChild(li);
-      }
-    } catch (e) {
-      const tpl = document.getElementById('news-fallback');
-      if (tpl) ul.appendChild(tpl.content.cloneNode(true));
-    }
-  })();
-  </script>
 </html>
 
 <!-- 運用者向けテンプレート（公開画面には表示されません） -->
